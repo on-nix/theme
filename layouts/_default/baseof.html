@@ -10,13 +10,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     {{ $resource := resources.Get "styles.css" | minify }}
     <link rel="stylesheet" href={{ $resource.RelPermalink }} />
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico" />
-
   </head>
-  <body class="bg-white consolas lh-copy">
+  <body class="bg-white font lh-copy">
 
     <nav class="bg-black w-100">
       <a class="b f2 link pl2 white" href="/">
