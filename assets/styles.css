@@ -1,3 +1,9 @@
+/* Functional styles */
 .bg-cyan { background-color: #B2EBF2; }
 .cyan { color: #B2EBF2; }
 .font { font-family: 'Raleway'; }
+
+/* Resets */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
