@@ -44,21 +44,23 @@
   </head>
   <body class="f4 font lh-copy">
 
-    <nav class="bg-black w-100">
-      <a class="b f2 link pl2 white" href="/">
-        {{ block "nav-title" . }}
-          define "nav-title"
-        {{ end }}
-        </a>
-      </nav>
-
-      <nav class="bg-cyan pa0 shadow-1 w-100">
-        <p class="black ma0 pa0 pl2">
-          {{ block "nav-subtitle" . }}
-            define "nav-subtitle"
+    <nav class="bg-black pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="white" href="/">
+          {{ block "nav-title" . }}
+            define "nav-title"
           {{ end }}
-        </p>
-      </nav>
+        </a>
+      </p>
+    </nav>
+
+    <nav class="bg-cyan pa0 shadow-1 w-100">
+      <p class="black ma0 pv0 pl2">
+        {{ block "nav-subtitle" . }}
+          define "nav-subtitle"
+        {{ end }}
+      </p>
+    </nav>
 
     <div class="pa1">
       {{ block "main" . }}
