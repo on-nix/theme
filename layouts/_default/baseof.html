@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {{ $font := "https://fonts.googleapis.com/css?family=Raleway&display=swap" }}
+    {{ $style := resources.Get "styles.css" | minify }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://necolas.github.io">
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preload" as="font" href="{{ $font }}" type="style">
+
     <title>
       {{ block "title" . }}
         define "title"
@@ -10,9 +18,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ $resource := resources.Get "styles.css" | minify }}
-    <link rel="stylesheet" href={{ $resource.RelPermalink }} />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <link rel="stylesheet" href="{{ $font }}" type="text/css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico" />
