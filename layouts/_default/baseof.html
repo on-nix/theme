@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{ $font := "https://fonts.googleapis.com/css?family=Raleway&display=swap" }}
-    {{ $style := resources.Get "styles.css" | minify }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://necolas.github.io">
     <link rel="preconnect" href="https://raw.githubusercontent.com">
     <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preload" as="font" href="{{ $font }}" type="style">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="preload" as="icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+      onload="this.onload=null;this.rel='shortcut icon'"
+    />
 
     <title>
       {{ block "title" . }}
@@ -18,11 +32,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    <link rel="stylesheet" href="{{ $font }}" type="text/css">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico" />
+    <style>
+      /* Functional styles */
+      .bg-cyan { background-color: #B2EBF2; }
+      .cyan { color: #B2EBF2; }
+      .font { font-family: 'Raleway'; }
+
+      /* Resets */
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
   </head>
   <body class="bg-white f4 font lh-copy">
 
