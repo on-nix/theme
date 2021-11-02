@@ -26,14 +26,35 @@
 
     <style>
       :root {
-        --cyan: #B2EBF2;
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
       }
 
       /* Functional styles */
-      .bg-cyan { background-color: var(--cyan); }
-      .b--cyan { border-color: var(--cyan);}
-      .cyan { color: var(--cyan); }
-      .font { font-family: 'Raleway'; }
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
 
       /* Resets */
       a:link { text-decoration: none; }
@@ -47,11 +68,11 @@
       {{ end }}
     </title>
   </head>
-  <body class="f4 font lh-copy">
+  <body class="f4 lh-copy" style="font-family: Raleway;">
 
-    <nav class="bg-black pa0 w-100">
+    <nav class="bg-prim-d pa0 w-100">
       <p class="b f2 ma0 pv0 pl2">
-        <a class="white" href="/">
+        <a class="sec-l" href="/">
           {{ block "nav-title" . }}
             define "nav-title"
           {{ end }}
@@ -59,8 +80,8 @@
       </p>
     </nav>
 
-    <nav class="bg-cyan pa0 shadow-1 w-100">
-      <p class="black ma0 pv0 pl2">
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
         {{ block "nav-subtitle" . }}
           define "nav-subtitle"
         {{ end }}
