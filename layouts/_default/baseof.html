@@ -63,9 +63,9 @@
     </style>
 
     <title>
-      {{ block "title" . }}
+      {{- block "title" . -}}
         define "title"
-      {{ end }}
+      {{- end -}}
     </title>
   </head>
   <body class="f4 lh-copy" style="font-family: Raleway;">
@@ -73,24 +73,24 @@
     <nav class="bg-prim-d pa0 w-100">
       <p class="b f2 ma0 pv0 pl2">
         <a class="sec-l" href="/">
-          {{ block "nav-title" . }}
+          {{- block "nav-title" . -}}
             define "nav-title"
-          {{ end }}
+          {{- end -}}
         </a>
       </p>
     </nav>
 
     <nav class="bg-sec pa0 shadow-1 w-100">
       <p class="prim-d ma0 pv0 pl2">
-        {{ block "nav-subtitle" . }}
+        {{- block "nav-subtitle" . -}}
           define "nav-subtitle"
-        {{ end }}
+        {{- end -}}
       </p>
     </nav>
 
     <div class="pa1">
-      {{ block "main" . }}
-      {{ end }}
+      {{- block "main" . -}}
+      {{- end -}}
     </div>
 
     <div class="pv3"></div>
